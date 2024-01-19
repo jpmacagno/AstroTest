@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: prueba
-pubDate: '2024-01-19T14:56:45-03:00'
-description: prueba layout
+title: blog test
+pubDate: '2024-01-19T15:09:06-03:00'
+description: blogtest
 author: jota
 thumbnail: /images/uploads/elon.jpg
 ---
