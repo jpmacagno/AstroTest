@@ -1,32 +1,22 @@
 ---
-import Header from '../components/Header.astro';
-import '../styles/global.css';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Sobre mi";
 const identity = {
-    firstName : "Juan",
+    firstName : "Marian",
     country : "Argentina",
-    occupation : "Diseño",
+    occupation : "Viajes de egresados venidos a menos",
     hobbies: ["fotografia", "observación de aves", "peñarol"]
 }
 
 const skills =  ["HTML","CSS","Javascript","React","Astro"];
 
 const happy = true;
-const finished = false;
-const goal = 3;
+const finished = true;
 const skillColor = "navy";
 const fontWeight = 300;
 const textCase = "uppercase";
 ---
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Header></Header>
+<BaseLayout pageTitle={pageTitle}>
     <p>He aquí algunos datos sobre mí</p>
     <ul>
         <li>Me llamo {identity.firstName}</li>
@@ -46,7 +36,6 @@ const textCase = "uppercase";
 
 {finished && <p>¡He terminado este tutorial!</p>}
 
-{goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
 
 
 <style define:vars={{skillColor, fontWeight, textCase}}>
@@ -59,6 +48,8 @@ const textCase = "uppercase";
       font-weight: var(--fontWeight);
       text-transform: var(--textCase);
     }
+    li{
+      list-style:none;
+    }
   </style>
-  </body>
-</html>
+  </BaseLayout>
